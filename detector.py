@@ -13,7 +13,7 @@ from pyrogram import Client, filters
 nltk.download('stopwords')
 
 # Load dataset
-df = pd.read_csv("C:/Users/Abhishek/Downloads/spam_ham_dataset.csv/spam_ham_dataset.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/silverfruitplayer/email-detector/main/spam_ham_dataset.csv")
 
 # Clean the text column
 df['text'] = df['text'].apply(lambda x: x.replace('\r\n', ' '))
@@ -68,7 +68,7 @@ def classify_new_email(email_text):
 # Telegram Bot setup
 api_id = '6'
 api_hash = 'eb06d4abfb49dc3eeb1aeb98ae0f581e'
-bot_token = '6560962385:AAG0Y4sZxq53hJLTk4866xmd1ulNSqjwFdc'
+bot_token = ''
 
 app = Client("spamdetectbot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
